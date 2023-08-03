@@ -1,0 +1,899 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--color1);
+    --color1: #C4D7B2;
+    --color2: #F7FFE5;
+    --color3: #263434;
+    --color4: #61755f;
+    --color5: #E1ECC8;
+    
+    
+}
+
+
+/* ===============================================================HEADER SECTION=============================================================== */
+
+
+.nav-bar {
+    padding: 20px 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+}
+
+.logo img {
+    display: flex;
+    height: 50px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    padding-left: 35px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--color3);
+    text-align: center;
+    transition: 0.3s;
+    position: relative;
+    padding: 0 5px;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--color3);
+    transition: 0.3s;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+
+.open-menu, .close-menu {
+    position: absolute;
+    color: var(--color3);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {display: none;}
+
+@media only screen and (max-width: 1200px){
+    .nav-bar {
+     padding: 20px 20px;   
+    }
+
+    .logo img {
+        height: 5vh;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .nav-bar {
+     padding: 20px 20px;   
+    }
+
+    .logo img {
+        height: 5vh;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .nav-bar {
+     padding: 20px 20px;   
+    }
+
+    .logo img {
+        height: 5vh;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 75%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: 0.5s;
+    }
+
+    .menu li {
+        margin-top: 40px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .open-menu , .close-menu {
+        display: block;
+    }
+    
+    #check:checked ~ .menu {right: 0;}
+}
+
+/* ===============================================================CONTENT SECTION=============================================================== */
+/* ===============================================================HOME SECTION=============================================================== */
+.home {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-title h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color:var(--color3);
+    text-align: center;
+}
+
+.home-title h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color4);
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 1200px){
+    .home {
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .home-title h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color:var(--color3);
+        text-align: center;
+    }
+    
+    .home-title h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--color4);
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .home {
+        height: 35vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .home-title h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color:var(--color3);
+        text-align: center;
+    }
+    
+    .home-title h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--color4);
+        text-align: center;
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    .home {
+        height: 35vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-title h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color:var(--color3);
+        text-align: center;
+    }
+    
+    .home-title h3 {
+        font-size: 1rem;;
+        font-weight: 700;
+        color: var(--color4);
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* ===============================================================HOME END =============================================================== */
+/* ===============================================================TESTIMONIAL START=============================================================== */
+.content-1 {
+    padding: 20px 10%;
+    display: flex;
+}
+
+.testi-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.testi-image {
+    height: 668px;
+    width: 1000px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+
+.testi-slide em {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.testi-user {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.testi-user-details {
+    margin-left: 10px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 1500px){
+    .content-1 {
+        padding: 20px 10%;
+        display: flex;
+    }
+
+    .testi-image {
+        height: 501px;
+        width: 750px;
+    }
+
+    .testi-slide em {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .content-1 {
+        padding: 20px 10%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testi-image {
+        height: 501px;
+        width: 750px;
+    }
+
+    .testi-slide em {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .content-1 {
+        padding: 20px 10%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testi-image {
+        height: 467px;
+        width: 700px;
+    }
+
+    .testi-slide em {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 640px) {   
+    .content-1 {
+        padding: 20px 10%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testi-image {
+        height: 234px;
+        width: 350px;
+    }
+
+    .testi-slide em {
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+}
+/* ===============================================================TESTIMONIAL END=============================================================== */
+/* ===============================================================FORM START=============================================================== */
+.form-container {
+    border-radius: 30px;
+    background-color: var(--color2);
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 30px;
+}
+
+#form1 {
+    width: 100%;
+    padding: 10% 10%;
+}
+
+.form-container h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.inputbox {
+    position: relative;
+    margin: 60px 0;
+    width: 100%;
+    border-bottom: 2px solid #A0C49D;
+}
+
+.inputbox label {
+    position: absolute;
+    bottom: 100%;
+    left: 5px;
+    color: var(--color3);
+    font-size: 1rem;
+}
+
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: var(--color3);
+}
+
+.inputbox select {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: var(--color3);
+}
+
+.inputbox textarea {
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: var(--color3);
+}
+
+.inputbox {
+    color: var(--color3);
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    padding: 0 1px;
+    transition: .3s;
+}
+
+.inputbox:after {
+    content: "";
+    position: absolute;
+    background-color: var(--color3);
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -1px;
+    transition: .5s;
+}
+
+.inputbox:hover:after {
+    width: 100%;
+}
+
+.inputbox select option {
+    background-color: var(--color2);
+}
+
+.submit {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: var(--color2);
+    border: 3px solid var(--color3);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+}
+
+.submit:hover  {
+    background-color: var(--color3);
+    color: var(--color1);
+}
+
+@media only screen and (max-width: 1500px){
+    
+    .form-container h2 {
+        font-size: 1.25rem;
+    }
+
+    .inputbox label {
+        font-size: 0.7rem;
+    }
+
+    .inputbox input {
+        height: 20px;
+        font-size: 0.7rem;
+    }
+
+    .inputbox select {
+        font-size: 0.7rem;
+    }
+
+    .inputbox textarea {
+        font-size: 0.7rem;
+    }
+
+    .submit {
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    
+    .form-container h2 {
+        font-size: 2rem;
+    }
+
+    .inputbox label {
+        font-size: 1rem;
+    }
+
+    .inputbox input {
+        height: 20px;
+        font-size: 1rem;
+    }
+
+    .inputbox select {
+        font-size: 1rem;
+    }
+
+    .inputbox textarea {
+        font-size: 1rem;
+    }
+
+    .submit {
+        font-size: 1rem;
+    }
+    .submit {
+        width: 100%;
+        height: 40px;
+        border-radius: 40px;
+        background: var(--color3);
+        border: 3px solid var(--color3);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    
+    .form-container h2 {
+        font-size: 2rem;
+    }
+
+    .inputbox label {
+        font-size: 1rem;
+    }
+
+    .inputbox input {
+        height: 20px;
+        font-size: 1rem;
+    }
+
+    .inputbox select {
+        font-size: 1rem;
+    }
+
+    .inputbox textarea {
+        font-size: 1rem;
+    }
+
+    .submit {
+        font-size: 1rem;
+    }
+
+    .submit {
+        width: 100%;
+        height: 40px;
+        border-radius: 40px;
+        background: var(--color3);
+        border: 3px solid var(--color3);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    
+    .form-container h2 {
+        font-size: 2rem;
+    }
+
+    .inputbox label {
+        font-size: 1rem;
+    }
+
+    .inputbox input {
+        height: 20px;
+        font-size: 1rem;
+    }
+
+    .inputbox select {
+        font-size: 1rem;
+    }
+
+    .inputbox textarea {
+        font-size: 1rem;
+    }
+
+    .submit {
+        width: 100%;
+        height: 40px;
+        border-radius: 40px;
+        background: var(--color3);
+        border: 3px solid var(--color3);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+/* ===============================================================FORM END=============================================================== */
+/* ===============================================================WHY US START=============================================================== */
+.content-2 {
+    padding: 0 0 0 10%;
+    width: 60%;
+}
+
+.why-us-container {
+    /* width: 50%; */
+    margin-top: -50px;
+}
+
+.why-us {
+    /* border: 1px solid black; */
+    display: flex;
+}
+
+.why-us img{
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.why-us-description{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 1500px) {
+    .why-us-container {
+        margin-top: -70px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .content-2 {
+        padding: 0 10%;
+        width: 100%;
+    }
+    .why-us-container {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .content-2 {
+        padding: 0 10%;
+        width: 100%;
+    }
+    .why-us-container {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .content-2 {
+        padding: 0 10%;
+        width: 100%;
+    }
+    .why-us-container {
+        margin-top: 30px;
+    }
+
+    @media only screen and (max-width: 600px){
+
+        .why-us-container h4 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .why-us-description p{
+           font-size: 1rem;
+        }  
+    }
+}
+/* ===============================================================WHY US END=============================================================== */
+/* ===============================================================OUR PACKAGE START=============================================================== */
+.content-3 {
+    background-image: url('/assets/pexels-anastasia-shuraeva-42100372.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.our-package {
+    margin-top: 50px;
+    height: 250px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-package h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #263434;;
+}
+/* ===============================================================OUR PACKAGE END=============================================================== */
+/* =============================================================== PACKAGE LIST START=============================================================== */
+.content-4 {
+    padding: 0 10%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.variant {
+    max-width: 30%;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.variant img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.variant-description{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.variant-description h2{
+    color: var(--color3);
+}
+
+.variant-description p{
+    color: var(--color4);
+}
+
+@media only screen and (max-width: 992px) {
+    .variant {
+        max-width: 50%;
+        margin-bottom: 50px;
+        display: flex;
+    }
+    
+}
+
+
+@media only screen and (max-width: 600px){
+    .variant {
+        max-width: 50%;
+        margin-bottom: 50px;
+        display: flex;
+    }
+
+    .variant-description h2{
+        font-size: 1rem;
+    }
+    
+    .variant-description p{
+        font-size: 0.7rem;
+    }
+
+    .variant {
+        margin-bottom: 30px;
+    }
+}
+/* =============================================================== PACKAGE LIST END=============================================================== */
+/* =============================================================== CALL US START=============================================================== */
+
+.content-5 {
+    padding: 0 10%;
+    text-align: center;
+}
+
+
+.call-us-2 {
+    margin-top: 50px;
+}
+
+.call-us-2 h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color3);
+}
+
+.call-us-2 h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color4);
+    margin-top: 40px;
+}
+
+.btn-call {
+    font-weight: 600;
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    background: var(--color1);
+    border: 3px solid var(--color3);
+    color: var(--color3);
+    border-radius: 40px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-call:hover  {
+    background-color: var(--color3);
+    color: var(--color1);
+}
+
+
+@media only screen and (max-width: 600px){
+
+    .call-us-2 h1 {
+        font-size: 1.5rem;
+    }
+    
+    .call-us-2 h3 {
+        font-size: 0.7rem; 
+        margin-top: 20px;
+    }
+}
+/* =============================================================== CALL US END=============================================================== */
+/* =============================================================== FOOTER START=============================================================== */
+.footer {
+    background-color: var(--color5);
+    margin-top: 100px;
+    padding: 35px 10%;
+    font-size: 0.7rem;
+    text-align: center;
+    
+}
+
+.footer a {
+    color: var(--color3);
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    padding: 0 1px;
+    transition: .3s;
+    margin-left: 25px;
+    
+}
+
+.footer a:after {
+    content: "";
+    position: absolute;
+    background-color: var(--color3);
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -1px;
+    transition: .3s;
+}
+
+.footer a:hover:after {
+    width: 100%;
+}

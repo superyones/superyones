@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=PT Serif' rel='stylesheet'/>
+    <link rel="icon" type="image/x-icon" href="/assets/yones icon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <title>Yones - Travel Agents</title>
+
+</head>
+<body>
+    <header>          
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo"><a href="/index.html"></a><img src="/assets/Yones Logo.png" alt="Yones - Travel Agents"></a></li>
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#our-package">Our Package</a></li>
+                    <li><a href="#call-us-2">Contact Us</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <header class="home" id="home">
+            <div class="home-title">
+                <h1>Your Trusted Travel Agent's</h1>
+                <h3>Your happiness is our happiness</h3>
+            </div>
+        </header>
+    
+        <section class="content-1">
+            <div  class="testimonials-content">
+                <div class="testi-slide">
+                    <img src="/assets/bali.jpg" alt="bali" class="testi-image">
+                    <em>"Liburan jadi menyenangkan bersama Yones Travel Agents. Ke Bali makan pisang sepuasnya"</em>
+                    <div class="testi-user">
+                        <img  src="/assets/monkey.png" class="user-image">
+                        <div class="testi-user-details">
+                            <h2>Bapak Monyet</h2>
+                            <em>Maling Pisang, 23</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-slide">
+                    <img src="/assets/japan.jpg" alt="japan" class="testi-image">
+                    <em>"Liburan jadi menyenangkan bersama Yones Travel Agents. Mencari madu di Jepang sangat enak."</em>
+                    <div class="testi-user">
+                        <img  src="/assets/bear.png" class="user-image">
+                        <div class="testi-user-details">
+                            <h2>Bapak Beruang</h2>
+                            <em>Pencari Madu, 35</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-slide">
+                    <img src="/assets/singapore.jpg" alt="singapore" class="testi-image">
+                    <em>"Liburan jadi menyenangkan bersama Yones Travel Agents. Kena PHP ngantri di Universal Studio terasa menyenangkan"</em>
+                    <div class="testi-user">
+                        <img  src="/assets/chameleons.png" class="user-image">
+                        <div class="testi-user-details">
+                            <h2>Ibu Kadal</h2>
+                            <em>Tukang PHP, 28</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+<!-- ===============================================================JS AUTO SLIDER START=============================================================== -->
+            <script src="js/script.js"></script>
+<!-- ===============================================================JS AUTO SLIDER END=============================================================== -->
+<!-- ===============================================================TESTIMONI & FORM START=============================================================== -->
+            <div class="form-container">
+                <form action="/" method="get" id="form1" name="form1" onsubmit="return validateForm()" >
+                    <h2>Get in Touch</h2>
+                    <div class="inputbox">
+                        <input type="text" id="name" name="fullname" placeholder="Enter your name">
+                        <label for="name">Your Name</label>
+                    </div>
+            
+                    <div class="inputbox">
+                        <input type="email" id="email" name="email" placeholder="Enter your email address">
+                        <label for="email">Email</label>
+                    </div>
+            
+                    <div class="inputbox">
+                        <input type="tel" id="pnumber" name="phonenumber" placeholder="Enter your phone number"> 
+                        <label for="pnumber">Phone Number</label> 
+                    </div>
+
+                    <div class="inputbox">
+                        <select id="interest" name="interest">
+                            <option value="">Select an Interest</option>
+                            <option value="Bali">Bali</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Jakarta">Jakarta</option>
+                        </select>
+                        <label for="interest">What are you interested in</label>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <textarea id="message" name="message" placeholder="Your message here.."></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <input class="submit" type="submit" value="Submit">
+                    <!-- ===============================================================JS FORM VALIDATION START=============================================================== -->
+                    <script src="js/script.js"></script>
+                    <!-- ===============================================================JS FORM VALIDATION END=============================================================== -->
+                </form>
+            </div>
+        </section>
+        <!-- ===============================================================TESTIMONI & FORM END=============================================================== -->
+        <!-- ===============================================================WHY US START=============================================================== -->
+        <section class="content-2">
+            <div class="why-us-container">
+                <h4>Use this space to provide user with more information about your offer. Consider it a follow-up to your headline and explain the benefits of your service or product</h4>
+                <div class="why-us">
+                    <img src="/assets/one.png">
+                    <div class="why-us-description">
+                        <p>Your first feature, written in the form of a benefit statement</p>
+                    </div>
+                </div>       
+                <div class="why-us">
+                    <img src="/assets/two.png">
+                    <div class="why-us-description">
+                        <p>Your second feature, written in the form of a benefit statement</p>
+                    </div>
+                </div>  
+                <div class="why-us">
+                    <img src="/assets/three.png">
+                    <div class="why-us-description">
+                        <p>Your third feature, written in the form of a benefit statement</p>
+                    </div>
+                </div>     
+            </div>
+        </section>
+        <!-- ===============================================================WHY US END=============================================================== -->
+        <!-- ===============================================================OUR PACKAGE START=============================================================== -->
+        <section class="content-3" id="our-package">
+            <div class="our-package">
+                <h1>Our Package</h1>
+            </div>   
+        </section>
+        <!-- ===============================================================OUR PACKAGE END=============================================================== -->
+        <!-- =============================================================== PACKAGE LIST START=============================================================== -->
+        <section class="content-4">
+            <div class="variant">
+                <img src="/assets/map.png">
+                <div class="variant-description">
+                    <h2>Bali</h2>
+                    <p>Travel dan wisata di Bali. Kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+            </div>
+            <div class="variant">
+                <img src="/assets/map.png">
+                <div class="variant-description">
+                    <h2>Japan</h2>
+                    <p>Travel dan wisata di Japan. Kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+            </div>
+            <div class="variant">
+                <img src="/assets/map.png">
+                <div class="variant-description">
+                    <h2>Singapore</h2>
+                    <p>Travel dan wisata di Singapore. Kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+            </div>
+            <div class="variant">
+                <img src="/assets/map.png">
+                <div class="variant-description">
+                    <h2>Bandung</h2>
+                    <p>Travel dan wisata di Bandung. Kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+            </div>
+            <div class="variant">
+                <img src="/assets/map.png">
+                <div class="variant-description">
+                    <h2>Surabaya</h2>
+                    <p>Travel dan wisata di Surabaya. Kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+            </div>
+            <div class="variant">
+                <img src="/assets/map.png">
+                <div class="variant-description">
+                    <h2>Jakarta</h2>
+                    <p>Travel dan wisata di Jakarta. Kunjungi cagar budaya dan kuliner yang menarik</p>
+                </div>
+            </div>
+        </section>
+        <!-- =============================================================== PACKAGE LIST END=============================================================== -->
+        <!-- =============================================================== CALL US START=============================================================== -->
+        <section class="content-5">
+            <div class="call-us-2" id="call-us-2">
+                
+                <h1>Your Closing Argument Headline</h1>
+                <h3>Suspendisse egestas rhoncus urna in bibendum. Donec urna neque, euismod sed justo quis, convallis tincidunt risus. Phasellus fringila odio vel erat fringilla.</h3>
+                <button class="btn-call" onclick="myFunction()">Contact Us</button>
+            </div>
+        </section>
+        <!-- =============================================================== CALL US END=============================================================== -->
+    </main>
+    <!-- =============================================================== FOOTER START=============================================================== -->
+    <footer class="footer">
+        <a href="/index.html">Terms of Service</a>
+        <a href="/index.html">Privacy Policy</a>
+        <a href="/index.html">Our Commitment</a>
+        <p>Copyright &copy; 2023 Yones. Yones is not responsible for the content of external sites</p> 
+        <!-- =============================================================== FOOTER END=============================================================== -->
+    </footer>
+    </main>
+</body>
+</html>
